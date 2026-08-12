@@ -29,7 +29,7 @@ class IndexItem:
 
 
 index_items = []
-with open(f"../game_files/{file_name}.ind", "rb") as archive:
+with open(f"{file_name}.ind", "rb") as archive:
   file_count = int.from_bytes(archive.read(2), byteorder="little")
   print(f"file count: {file_count}")
   for i in range(file_count):
