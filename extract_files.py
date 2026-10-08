@@ -77,7 +77,7 @@ with open(f"{file_name}.img", "rb") as archive:
 
     if size == 0:
       break
-    with open(f"result/{index_items[i].name}", "wb") as archived_file:
+    with open(f"result/{index_items[i].name.replace('*', ''}", "wb") as archived_file:
       if compressed:
         archived_file.write(zlib.decompress(archive.read(size), wbits=zlib.MAX_WBITS))
       else:
